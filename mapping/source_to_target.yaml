@@ -1,0 +1,39 @@
+# Source-to-target mapping specification.
+# Single source of truth for how the raw transaction feed maps onto the
+# curated warehouse schema. Editing this file changes the pipeline's
+# behaviour without touching Python code.
+
+source: raw.transactions
+target: curated.fact_transaction
+
+columns:
+  - source: txn_id
+    target: transaction_id
+    type: string
+    key: true
+  - source: account_id
+    target: account_id
+    type: string
+    nullable: false
+  - source: posted_at
+    target: posted_at
+    type: timestamp
+    nullable: false
+  - source: merchant
+    target: merchant_name
+    type: string
+  - source: channel
+    target: channel
+    type: string
+  - source: currency
+    target: currency_code
+    type: string
+    domain: [GBP, USD, EUR, INR]
+  - source: amount
+    target: amount
+    type: decimal
+    nullable: false
+  - source: status
+    target: status
+    type: string
+    domain: [POSTED, PENDING, SETTLED, REVERSED]
