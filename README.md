@@ -10,7 +10,7 @@ Built to run on **10M+ daily transaction records** with a flat memory
 footprint via chunked processing, and packaged so the same code runs on a
 laptop, in CI, or behind an **AWS Lambda** triggered by **S3** landings.
 
-[![CI](https://github.com/OWNER/financial-etl-reconciliation/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/financial-etl-reconciliation/actions/workflows/ci.yml)
+[![CI](https://github.com/Vinithvk98/financial-etl-reconciliation/actions/workflows/ci.yml/badge.svg)](https://github.com/Vinithvk98/financial-etl-reconciliation/actions/workflows/ci.yml)
 
 ## Why it exists
 
